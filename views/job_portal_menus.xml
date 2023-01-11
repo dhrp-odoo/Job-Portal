@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <menuitem id="job_portal_menu_root" name="Job Portal">
+        <menuitem id="job_portal_first_level_menu_position" name="Job Positions" action="job_portal_model_action"/>
+        <menuitem id="job_portal_first_level_menu_seeker" name="Job Seekers" action="job_seeker_model_action"/>
+    </menuitem>
+</odoo>
