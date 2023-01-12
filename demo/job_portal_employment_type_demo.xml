@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- 1 -->
+        <record id="job_portal_employment_type_demo_data_1" model="job.employment.type">
+            <field name="name">Full Time Employment</field>
+        </record>
+        <!-- 2 -->
+        <record id="job_portal_employment_type_demo_data_2" model="job.employment.type">
+            <field name="name">Part Time Employment</field>
+        </record>
+        <!-- 3 -->
+        <record id="job_portal_employment_type_demo_data_3" model="job.employment.type">
+            <field name="name">Contract Based Employment</field>
+        </record>
+        <!-- 4 -->
+        <record id="job_portal_employment_type_demo_data_4" model="job.employment.type">
+            <field name="name">Internship</field>
+        </record>
+    </data>
+</odoo>

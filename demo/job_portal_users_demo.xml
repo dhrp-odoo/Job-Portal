@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- 1 -->
+        <record id="job_portal_users_demo_data_1" model="job.portal.users">
+            <field name="name">Dhrutik Patel</field>
+            <field name="age">21</field>
+            <field name="phone_number">1234567890</field>
+            <field name="email_address">dhrutikpatel@odoo.com</field>
+        </record>
+        <!-- 2 -->
+        <record id="job_portal_users_demo_data_2" model="job.portal.users">
+            <field name="name">Sachin Patel</field>
+            <field name="age">22</field>
+            <field name="phone_number">0987654321</field>
+            <field name="email_address">sachinpatel@odoo.com</field>
+        </record>
+        <!-- 3 -->
+        <record id="job_portal_users_demo_data_3" model="job.portal.users">
+            <field name="name">Mohit Beniwal</field>
+            <field name="age">23</field>
+            <field name="phone_number">1234567899</field>
+            <field name="email_address">mohitbeniwal@odoo.com</field>
+        </record>
+        <!-- 4 -->
+        <record id="job_portal_users_demo_data_4" model="job.portal.users">
+            <field name="name">Shaan Thakkar</field>
+            <field name="age">20</field>
+            <field name="phone_number">1234567889</field>
+            <field name="email_address">shaanthakkar@odoo.com</field>
+        </record>
+        <!-- 5 -->
+        <record id="job_portal_users_demo_data_5" model="job.portal.users">
+            <field name="name">Raj Gajipara</field>
+            <field name="age">23</field>
+            <field name="phone_number">1234566789</field>
+            <field name="email_address">rajgajipara@odoo.com</field>
+        </record>
+        <!-- 6 -->
+        <record id="job_portal_users_demo_data_6" model="job.portal.users">
+            <field name="name">Akshay Patel</field>
+            <field name="age">26</field>
+            <field name="phone_number">0987654432</field>
+            <field name="email_address">akshaypatel@odoo.com</field>
+        </record>
+        <!-- 7 -->
+        <record id="job_portal_users_demo_data_7" model="job.portal.users">
+            <field name="name">Fabien Pinckaers</field>
+            <field name="age">42</field>
+            <field name="phone_number">1547875483</field>
+            <field name="email_address">fabienpinckaers@odoo.com</field>
+        </record>
+        <!-- 8 -->
+        <record id="job_portal_users_demo_data_8" model="job.portal.users">
+            <field name="name">Harsh Modi</field>
+            <field name="age">22</field>
+            <field name="phone_number">1234347889</field>
+            <field name="email_address">harshmodi@odoo.com</field>
+        </record>
+        <!-- 9 -->
+        <record id="job_portal_users_demo_data_9" model="job.portal.users">
+            <field name="name">Roshan Patel</field>
+            <field name="age">21</field>
+            <field name="phone_number">1234667890</field>
+            <field name="email_address">roshanpatel@odoo.com</field>
+        </record>
+        <!-- 10 -->
+        <record id="job_portal_users_demo_data_10" model="job.portal.users">
+            <field name="name">Gurpreet Singh</field>
+            <field name="age">22</field>
+            <field name="phone_number">0087654321</field>
+            <field name="email_address">gurpreet@odoo.com</field>
+        </record>
+        <!-- 11 -->
+        <record id="job_portal_users_demo_data_11" model="job.portal.users">
+            <field name="name">Tejas Modi</field>
+            <field name="age">23</field>
+            <field name="phone_number">1444567899</field>
+            <field name="email_address">tejas@odoo.com</field>
+        </record>
+        <!-- 12 -->
+        <record id="job_portal_users_demo_data_12" model="job.portal.users">
+            <field name="name">Saurabh Mishra</field>
+            <field name="age">21</field>
+            <field name="phone_number">1334567889</field>
+            <field name="email_address">saurabh@odoo.com</field>
+        </record>
+    </data>
+</odoo>

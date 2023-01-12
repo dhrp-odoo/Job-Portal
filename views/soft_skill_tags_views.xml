@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="soft_skill_tags_model_action" model="ir.actions.act_window">
+        <field name="name">Soft Skill Tags</field>
+        <field name="res_model">soft.skill.tags</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No soft skill tags found.</p>
+            <p>Use the top left
+                <strong>CREATE</strong> button to add new soft skill tags!!!
+            </p>
+        </field>
+    </record>
+    <!--** List view **-->
+    <record id="soft_skill_tags_model_tree_view" model="ir.ui.view">
+        <field name="name">Soft Skill Tags List View</field>
+        <field name="model">soft.skill.tags</field>
+        <field name="arch" type="xml">
+            <tree string="List View">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

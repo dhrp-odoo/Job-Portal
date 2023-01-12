@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="technical_skill_tags_model_action" model="ir.actions.act_window">
+        <field name="name">Technical Skill Tags</field>
+        <field name="res_model">technical.skill.tags</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No technical skill tags found.</p>
+            <p>Use the top left
+                <strong>CREATE</strong> button to add new technical skill tags!!!
+            </p>
+        </field>
+    </record>
+    <!--** List view **-->
+    <record id="technical_skill_tags_model_tree_view" model="ir.ui.view">
+        <field name="name">Technical Skill Tags List View</field>
+        <field name="model">technical.skill.tags</field>
+        <field name="arch" type="xml">
+            <tree string="List View">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

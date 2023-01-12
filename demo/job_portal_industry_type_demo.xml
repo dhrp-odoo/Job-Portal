@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- 1 -->
+        <record id="job_portal_industry_type_demo_data_1" model="company.industry.type">
+            <field name="name">IT Industry</field>
+        </record>
+        <!-- 2 -->
+        <record id="job_portal_industry_type_demo_data_2" model="company.industry.type">
+            <field name="name">Pharma Industry</field>
+        </record>
+        <!-- 3 -->
+        <record id="job_portal_industry_type_demo_data_3" model="company.industry.type">
+            <field name="name">Automobile Industry</field>
+        </record>
+        <!-- 4 -->
+        <record id="job_portal_industry_type_demo_data_4" model="company.industry.type">
+            <field name="name">Private Bank</field>
+        </record>
+    </data>
+</odoo>

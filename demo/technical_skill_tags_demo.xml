@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- 1 -->
+        <record id="technical_skill_tags_01" model="technical.skill.tags">
+            <field name="name">Python</field>
+        </record>
+        <!-- 2 -->
+        <record id="technical_skill_tags_02" model="technical.skill.tags">
+            <field name="name">JavaScript</field>
+        </record>
+        <!-- 3 -->
+        <record id="technical_skill_tags_03" model="technical.skill.tags">
+            <field name="name">Java</field>
+        </record>
+        <!-- 4 -->
+        <record id="technical_skill_tags_04" model="technical.skill.tags">
+            <field name="name">C and C++</field>
+        </record>
+        <!-- 5 -->
+        <record id="technical_skill_tags_05" model="technical.skill.tags">
+            <field name="name">Kotlin</field>
+        </record>
+        <!-- 6 -->
+        <record id="technical_skill_tags_06" model="technical.skill.tags">
+            <field name="name">PHP</field>
+        </record>
+        <!-- 7 -->
+        <record id="technical_skill_tags_07" model="technical.skill.tags">
+            <field name="name">SQL</field>
+        </record>
+        <!-- 8 -->
+        <record id="technical_skill_tags_08" model="technical.skill.tags">
+            <field name="name">C#</field>
+        </record>
+    </data>
+</odoo>

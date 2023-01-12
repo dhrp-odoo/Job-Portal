@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- 1 -->
+        <record id="job_seeker_demo_data_1" model="job.seeker">
+            <field name="name" ref='job_portal_users_demo_data_1'/>
+            <field name="current_ctc">15</field>
+            <field name="expected_ctc">20</field>
+            <field name="age">25</field>
+            <field name="experience">4</field>
+            <field name="postcode">100001</field>
+        </record>
+        <!-- 2 -->
+        <record id="job_seeker_demo_data_2" model="job.seeker">
+            <field name="name" ref='job_portal_users_demo_data_2'/>
+            <field name="current_ctc">10</field>
+            <field name="expected_ctc">15</field>
+            <field name="age">23</field>
+            <field name="experience">2</field>
+            <field name="postcode">100003</field>
+        </record>
+        <!-- 3 -->
+        <record id="job_seeker_demo_data_3" model="job.seeker">
+            <field name="name" ref='job_portal_users_demo_data_3'/>
+            <field name="current_ctc">13</field>
+            <field name="expected_ctc">18</field>
+            <field name="age">24</field>
+            <field name="experience">3</field>
+            <field name="postcode">100004</field>
+        </record>
+        <!-- 4 -->
+        <record id="job_seeker_demo_data_4" model="job.seeker">
+            <field name="name" ref='job_portal_users_demo_data_4'/>
+            <field name="current_ctc">5</field>
+            <field name="expected_ctc">10</field>
+            <field name="age">22</field>
+            <field name="experience">1</field>
+            <field name="postcode">100005</field>
+        </record>
+    </data>
+</odoo>

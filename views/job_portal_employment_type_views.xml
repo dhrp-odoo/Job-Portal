@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="job_portal_employment_type_model_action" model="ir.actions.act_window">
+        <field name="name">Employment Types</field>
+        <field name="res_model">job.employment.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No employment type found.</p>
+            <p>Use the top left
+                <strong>CREATE</strong> button to add new employment type!!!
+            </p>
+        </field>
+    </record>
+    <!--** List view **-->
+    <record id="job_portal_employment_type_model_tree_view" model="ir.ui.view">
+        <field name="name">Employment Types List View</field>
+        <field name="model">job.employment.type</field>
+        <field name="arch" type="xml">
+            <tree string="List View">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

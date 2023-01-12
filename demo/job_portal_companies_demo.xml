@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- 1 -->
+        <record id="job_portal_company_demo_data_1" model="job.portal.company">
+            <field name="name">Odoo</field>
+            <field name="company_ceo" ref='job_portal_users_demo_data_7'/>
+            <field name="industry_type_id" ref='job_portal_industry_type_demo_data_1'/>
+            <field name="no_of_employees">2500</field>
+        </record>
+        <!-- 2 -->
+        <record id="job_portal_company_demo_data_2" model="job.portal.company">
+            <field name="name">Tata Consultancy Services</field>
+            <field name="industry_type_id" ref='job_portal_industry_type_demo_data_1'/>
+            <field name="no_of_employees">600000</field>
+        </record>
+        <!-- 3 -->
+        <record id="job_portal_company_demo_data_3" model="job.portal.company">
+            <field name="industry_type_id" ref='job_portal_industry_type_demo_data_1'/>
+            <field name="name">Infosys</field>
+            <field name="no_of_employees">500000</field>
+        </record>
+        <!-- 4 -->
+        <record id="job_portal_company_demo_data_4" model="job.portal.company">
+            <field name="industry_type_id" ref='job_portal_industry_type_demo_data_1'/>
+            <field name="name">Wipro</field>
+            <field name="no_of_employees">400000</field>
+        </record>
+        <!-- 5 -->
+        <record id="job_portal_company_demo_data_5" model="job.portal.company">
+            <field name="name">Tata Motors</field>
+            <field name="industry_type_id" ref='job_portal_industry_type_demo_data_3'/>
+            <field name="no_of_employees">250000</field>
+        </record>
+        <!-- 6 -->
+        <record id="job_portal_company_demo_data_6" model="job.portal.company">
+            <field name="name">Cipla</field>
+            <field name="industry_type_id" ref='job_portal_industry_type_demo_data_2'/>
+            <field name="no_of_employees">100000</field>
+        </record>
+        <!-- 7 -->
+        <record id="job_portal_company_demo_data_7" model="job.portal.company">
+            <field name="name">TVS Motors</field>
+            <field name="industry_type_id" ref='job_portal_industry_type_demo_data_3'/>
+            <field name="no_of_employees">50000</field>
+        </record>
+        <!-- 8 -->
+        <record id="job_portal_company_demo_data_8" model="job.portal.company">
+            <field name="name">Hero Motor Corp</field>
+            <field name="industry_type_id" ref='job_portal_industry_type_demo_data_3'/>
+            <field name="no_of_employees">25000</field>
+        </record>
+        <!-- 9 -->
+        <record id="job_portal_company_demo_data_9" model="job.portal.company">
+            <field name="name">HDFC Bank</field>
+            <field name="industry_type_id" ref='job_portal_industry_type_demo_data_4'/>
+            <field name="no_of_employees">250000</field>
+        </record>
+        <!-- 10 -->
+        <record id="job_portal_company_demo_data_10" model="job.portal.company">
+            <field name="name">Kotak Mahindra Bank</field>
+            <field name="industry_type_id" ref='job_portal_industry_type_demo_data_4'/>
+            <field name="no_of_employees">150000</field>
+        </record>
+        <!-- 11 -->
+        <record id="job_portal_company_demo_data_11" model="job.portal.company">
+            <field name="name">Axis Bank</field>
+            <field name="industry_type_id" ref='job_portal_industry_type_demo_data_4'/>
+            <field name="no_of_employees">200000</field>
+        </record>
+        <!-- 12 -->
+        <record id="job_portal_company_demo_data_12" model="job.portal.company">
+            <field name="name">Torrent Pharma</field>
+            <field name="industry_type_id" ref='job_portal_industry_type_demo_data_2'/>
+            <field name="no_of_employees">90000</field>
+        </record>
+    </data>
+</odoo>

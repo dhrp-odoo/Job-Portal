@@ -3,5 +3,13 @@
     <menuitem id="job_portal_menu_root" name="Job Portal">
         <menuitem id="job_portal_first_level_menu_position" name="Job Positions" action="job_portal_model_action"/>
         <menuitem id="job_portal_first_level_menu_seeker" name="Job Seekers" action="job_seeker_model_action"/>
+        <menuitem id="job_portal_first_level_menu_company" name="Companies" action="job_portal_company_model_action"/>
+        <menuitem id="job_portal_first_level_menu_user" name="Users" action="job_portal_user_model_action"/>
+        <menuitem id="job_portal_first_level_menu_configuration" name="Configuration">
+            <menuitem id="job_portal_industry_types" action="job_portal_industry_type_model_action" name="Industry Types" sequence="1"/>
+            <menuitem id="job_portal_employment_types" action="job_portal_employment_type_model_action" name="Employment Types" sequence="2"/>
+            <menuitem id="job_portal_technical_skill_tags" action="technical_skill_tags_model_action" name="Technical Skill Tags" sequence="3"/>
+            <menuitem id="job_portal_soft_skill_tags" action="soft_skill_tags_model_action" name="Soft Skill Tags" sequence="4"/>
+        </menuitem>
     </menuitem>
 </odoo>

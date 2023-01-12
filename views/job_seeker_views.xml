@@ -7,8 +7,24 @@
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">No job seekers found.</p>
             <p>Use the top left
-                <strong>CREATE</strong> button to add new job!!!
+                <strong>CREATE</strong> button to add new job seeker!!!
             </p>
+        </field>
+    </record>
+    <!--** List view **-->
+    <record id="job_seeker_tree_view" model="ir.ui.view">
+        <field name="name">Job Seekers List View</field>
+        <field name="model">job.seeker</field>
+        <field name="arch" type="xml">
+            <tree string="List View">
+                <field name="name"/>
+                <field name="age"/>
+                <field name="current_ctc"/>
+                <field name="expected_ctc"/>
+                <field name="experience"/>
+                <field name="city"/>
+                <field name="postcode"/>
+            </tree>
         </field>
     </record>
 </odoo>
