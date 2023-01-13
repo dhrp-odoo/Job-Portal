@@ -27,7 +27,7 @@
         </record>
         <!-- 7 -->
         <record id="technical_skill_tags_07" model="technical.skill.tags">
-            <field name="name">SQL</field>
+            <field name="name">PostgreSQL</field>
         </record>
         <!-- 8 -->
         <record id="technical_skill_tags_08" model="technical.skill.tags">

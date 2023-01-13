@@ -24,7 +24,64 @@
                 <field name="job_position"/>
                 <field name="no_of_opening"/>
                 <field name="employment_type_id"/>
+                <field name="technical_skills_ids" widget="many2many_tags"/>
             </tree>
+        </field>
+    </record>
+    <!--** Form view **-->
+    <record id="job_portal_form_view" model="ir.ui.view">
+        <field name="name">Job Positions Form View</field>
+        <field name="model">job.position</field>
+        <field name="arch" type="xml">
+            <form string="Property">
+                <sheet>
+                    <br/>
+                    <label for="company_name_id" string="Company Name"/>
+                    <h1>
+                        <field name="company_name_id" placeholder="Odoo"/>
+                    </h1>
+                    <br/>
+                    <group>
+                        <group>
+                            <field name="industry_type_id" options="{'no_quick_create':True,'no_create_edit':True}"/>
+                            <field name="job_position"/>
+                            <field name="experience_required"/>
+                            <field name="technical_skills_ids" widget="many2many_tags" options="{'no_quick_create':True,'no_create_edit':True}"/>
+                        </group>
+                        <group>
+                            <field name="employment_type_id" options="{'no_quick_create':True,'no_create_edit':True}"/>
+                            <field name="ctc"/>
+                            <field name="no_of_opening"/>
+                            <field name="soft_skills_ids" widget="many2many_tags" options="{'no_quick_create':True,'no_create_edit':True}"/>
+                        </group>
+                    </group>
+                    <br/>
+                    <notebook>
+                        <!-- Company's Info -->
+                        <page name="company_info" string="Company's Info">
+                            <br/>
+                            <group>
+                                <field name="job_description"/>
+                                <field name="job_benefit"/>
+                                <field name="company_address"/>
+                                <field name="website"/>
+                                <field name="education_required"/>
+                                <field name="job_applicant_ids" widget="many2many_tags" options="{'no_quick_create':True,'no_create_edit':True}"/>
+                                <field name="job_posted_date"/>
+                            </group>
+                        </page>
+                        <!-- Recruiter's Info -->
+                        <page name="recruiter_info" string="Recruiter's Info">
+                            <br/>
+                            <group>
+                                <field name="company_recruiter_name_id"/>
+                                <field name="company_email"/>
+                                <field name="company_contact_no" widget="phone"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
         </field>
     </record>
 </odoo>

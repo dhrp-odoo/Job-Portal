@@ -19,12 +19,35 @@
             <tree string="List View">
                 <field name="name"/>
                 <field name="age"/>
+                <field name="experience"/>
                 <field name="current_ctc"/>
                 <field name="expected_ctc"/>
-                <field name="experience"/>
                 <field name="city"/>
                 <field name="postcode"/>
+                <field name="technical_skills_ids" widget="many2many_tags"/>
             </tree>
+        </field>
+    </record>
+    <!--** Form view **-->
+    <record id="job_seeker_form_view" model="ir.ui.view">
+        <field name="name">Job Seekers Form View</field>
+        <field name="model">job.seeker</field>
+        <field name="arch" type="xml">
+            <form string="Property">
+                <sheet>
+                    <br/>
+                    <label for="name" string="Name"/>
+                    <h1>
+                        <field name="name" placeholder="Dhrutik Patel"/>
+                    </h1>
+                    <br/>
+                    <group>
+                        <group>
+                            <field name="current_ctc"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
         </field>
     </record>
 </odoo>

@@ -10,6 +10,7 @@
             <field name="job_position">Software Developer</field>
             <field name="no_of_opening">20</field>
             <field name="employment_type_id" ref='job_portal_employment_type_demo_data_1'/>
+            <field name="technical_skills_ids" eval="[Command.set([ref('technical_skill_tags_01'), ref('technical_skill_tags_02'), ref('technical_skill_tags_07')])]"/>
         </record>
         <!-- 2 -->
         <record id="job_position_demo_data_2" model="job.position">
@@ -20,6 +21,7 @@
             <field name="job_position">Technology Analyst</field>
             <field name="no_of_opening">200</field>
             <field name="employment_type_id" ref='job_portal_employment_type_demo_data_2'/>
+            <field name="technical_skills_ids" eval="[Command.set([ref('technical_skill_tags_03'), ref('technical_skill_tags_04'), ref('technical_skill_tags_05')])]"/>
         </record>
         <!-- 3 -->
         <record id="job_position_demo_data_3" model="job.position">
@@ -30,6 +32,7 @@
             <field name="job_position">Software Developer</field>
             <field name="no_of_opening">10</field>
             <field name="employment_type_id" ref='job_portal_employment_type_demo_data_3'/>
+            <field name="technical_skills_ids" eval="[Command.set([ref('technical_skill_tags_06'), ref('technical_skill_tags_07'), ref('technical_skill_tags_08')])]"/>
         </record>
         <!-- 4 -->
         <record id="job_position_demo_data_4" model="job.position">
@@ -40,6 +43,7 @@
             <field name="job_position">Software Developer</field>
             <field name="no_of_opening">15</field>
             <field name="employment_type_id" ref='job_portal_employment_type_demo_data_4'/>
+            <field name="technical_skills_ids" eval="[Command.set([ref('technical_skill_tags_02'), ref('technical_skill_tags_07'), ref('technical_skill_tags_05')])]"/>
         </record>
     </data>
 </odoo>

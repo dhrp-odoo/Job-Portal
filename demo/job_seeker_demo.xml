@@ -9,6 +9,7 @@
             <field name="age">25</field>
             <field name="experience">4</field>
             <field name="postcode">100001</field>
+            <field name="technical_skills_ids" eval="[Command.set([ref('technical_skill_tags_01'), ref('technical_skill_tags_02'), ref('technical_skill_tags_07')])]"/>
         </record>
         <!-- 2 -->
         <record id="job_seeker_demo_data_2" model="job.seeker">
@@ -18,6 +19,7 @@
             <field name="age">23</field>
             <field name="experience">2</field>
             <field name="postcode">100003</field>
+            <field name="technical_skills_ids" eval="[Command.set([ref('technical_skill_tags_03'), ref('technical_skill_tags_04'), ref('technical_skill_tags_08')])]"/>
         </record>
         <!-- 3 -->
         <record id="job_seeker_demo_data_3" model="job.seeker">
@@ -27,6 +29,7 @@
             <field name="age">24</field>
             <field name="experience">3</field>
             <field name="postcode">100004</field>
+            <field name="technical_skills_ids" eval="[Command.set([ref('technical_skill_tags_05'), ref('technical_skill_tags_06'), ref('technical_skill_tags_07')])]"/>
         </record>
         <!-- 4 -->
         <record id="job_seeker_demo_data_4" model="job.seeker">
@@ -36,6 +39,7 @@
             <field name="age">22</field>
             <field name="experience">1</field>
             <field name="postcode">100005</field>
+            <field name="technical_skills_ids" eval="[Command.set([ref('technical_skill_tags_07'), ref('technical_skill_tags_08'), ref('technical_skill_tags_01')])]"/>
         </record>
     </data>
 </odoo>
