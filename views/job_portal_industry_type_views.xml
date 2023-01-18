@@ -21,4 +21,21 @@
             </tree>
         </field>
     </record>
+    <!--** Form view **-->
+    <record id="job_portal_industry_form_view" model="ir.ui.view">
+        <field name="name">Job Portal Industry Type Form View</field>
+        <field name="model">company.industry.type</field>
+        <field name="arch" type="xml">
+            <form string="Industry Types Form">
+                <sheet>
+                    <br/>
+                    <label for="name" string="Name"/>
+                    <h1>
+                        <field name="name" placeholder="e.g. Internship"/>
+                    </h1>
+                    <br/>
+                </sheet>
+            </form>
+        </field>
+    </record>
 </odoo>

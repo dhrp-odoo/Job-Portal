@@ -21,4 +21,21 @@
             </tree>
         </field>
     </record>
+    <!--** Form view **-->
+    <record id="technical_skill_tags_form_view" model="ir.ui.view">
+        <field name="name">Technical Skill Tags Form View</field>
+        <field name="model">technical.skill.tags</field>
+        <field name="arch" type="xml">
+            <form string="Technical Skill Tags Form">
+                <sheet>
+                    <br/>
+                    <label for="name" string="Name"/>
+                    <h1>
+                        <field name="name" placeholder="e.g. JavaScript"/>
+                    </h1>
+                    <br/>
+                </sheet>
+            </form>
+        </field>
+    </record>
 </odoo>

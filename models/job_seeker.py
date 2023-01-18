@@ -9,7 +9,7 @@ class JobSeeker(models.Model):
     name = fields.Many2one("job.portal.users", string="Applicant Name", required=True)
     current_ctc = fields.Integer(string="Current CTC (LPA)", required=True, copy=False)
     expected_ctc = fields.Integer(string="Expected CTC (LPA)", required=True, copy=False)
-    phone_number = fields.Integer(string="Phone Number", copy=False)
+    phone_number = fields.Float(string="Phone Number", copy=False)
     email = fields.Char(string="Email Address", copy=False)
     age = fields.Integer(string="Age")
     date_of_birth = fields.Date(string="Date of Birth")
@@ -23,4 +23,4 @@ class JobSeeker(models.Model):
     education = fields.Text(string="Education")
     description = fields.Text(string="Description")
     last_job_details = fields.Text(string="Last Job Detail")
-    
+    image = fields.Binary("Image", attachment=True, store=True)

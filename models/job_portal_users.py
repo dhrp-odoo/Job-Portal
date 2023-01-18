@@ -11,3 +11,4 @@ class JobPortalUsers(models.Model):
     phone_number = fields.Integer(string="Phone")
     email_address = fields.Char(string="Email")
     language = fields.Many2one("res.lang", string="Language")
+    image = fields.Binary("Image", attachment=True, store=True)

@@ -7,5 +7,6 @@ class TechnicalSkillTags(models.Model):
     _description = "This model contains all technical languages tags."
     
     name = fields.Char(string="Name", required=True)
+    color = fields.Integer(string="Color Index")
     
     _sql_constraints = [('technical_language_unique', 'UNIQUE (name)', 'A language with the same name already exists.')]

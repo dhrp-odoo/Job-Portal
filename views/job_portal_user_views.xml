@@ -23,4 +23,34 @@
             </tree>
         </field>
     </record>
+    <!--** Form view **-->
+    <record id="job_portal_user_form_view" model="ir.ui.view">
+        <field name="name">Job Portal User Form View</field>
+        <field name="model">job.portal.users</field>
+        <field name="arch" type="xml">
+            <form string="Users">
+                <sheet>
+                    <field name="image" widget='image' class="oe_avatar" style="margin-top:20px" options='{"preview_image": "image", "size": [150, 150]}'/>
+                    <br/>
+                    <label for="name" string="Name"/>
+                    <h1>
+                        <field name="name" placeholder="e.g. Dhrutik Patel"/>
+                    </h1>
+                    <br/>
+                    <notebook>
+                        <!-- User's Info -->
+                        <page name="user_info" string="User's Info">
+                            <br/>
+                            <group>
+                                <field name="age"/>
+                                <field name="phone_number" widget="phone"/>
+                                <field name="email_address"/>
+                                <field name="language"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
 </odoo>

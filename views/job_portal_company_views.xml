@@ -25,4 +25,44 @@
             </tree>
         </field>
     </record>
+    <!--** Form view **-->
+    <record id="job_portal_company_form_view" model="ir.ui.view">
+        <field name="name">Job Portal Company Form View</field>
+        <field name="model">job.portal.company</field>
+        <field name="arch" type="xml">
+            <form string="Company">
+                <sheet>
+                    <field name="image" widget='image' class="oe_avatar" options='{"preview_image": "image", "size": [200, 200]}'/>
+                    <br/>
+                    <label for="name" string="Name"/>
+                    <h1>
+                        <field name="name" placeholder="e.g. Odoo"/>
+                    </h1>
+                    <br/>
+                    <notebook>
+                        <!-- Personal Info -->
+                        <page name="company_info" string="Company's Info">
+                            <br/>
+                            <group>
+                                <field name="industry_type_id"/>
+                                <field name="founded"/>
+                                <field name="no_of_employees"/>
+                                <field name="headquarter"/>
+                                <field name="company_ceo"/>
+                                <field name="company_founders" widget="many2many_tags"/>
+                                <field name="our_offices" widget="many2many_tags"/>
+                            </group>
+                        </page>
+                        <!-- Description -->
+                        <page name="description" string="Description">
+                            <br/>
+                            <group>
+                                <field name="description"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
 </odoo>

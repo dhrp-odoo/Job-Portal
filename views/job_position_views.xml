@@ -24,7 +24,7 @@
                 <field name="job_position"/>
                 <field name="no_of_opening"/>
                 <field name="employment_type_id"/>
-                <field name="technical_skills_ids" widget="many2many_tags"/>
+                <field name="technical_skills_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
             </tree>
         </field>
     </record>
@@ -33,12 +33,13 @@
         <field name="name">Job Positions Form View</field>
         <field name="model">job.position</field>
         <field name="arch" type="xml">
-            <form string="Property">
+            <form string="Position">
                 <sheet>
+                    <field name="image" widget='image' class="oe_avatar" style="margin-top:20px" options='{"preview_image": "image", "size": [150, 150]}'/>
                     <br/>
                     <label for="company_name_id" string="Company Name"/>
                     <h1>
-                        <field name="company_name_id" placeholder="Odoo"/>
+                        <field name="company_name_id" placeholder="e.g. Odoo"/>
                     </h1>
                     <br/>
                     <group>
@@ -46,13 +47,13 @@
                             <field name="industry_type_id" options="{'no_quick_create':True,'no_create_edit':True}"/>
                             <field name="job_position"/>
                             <field name="experience_required"/>
-                            <field name="technical_skills_ids" widget="many2many_tags" options="{'no_quick_create':True,'no_create_edit':True}"/>
+                            <field name="technical_skills_ids" widget="many2many_tags" options="{'no_quick_create':True,'no_create_edit':True, 'color_field': 'color'}"/>
                         </group>
                         <group>
                             <field name="employment_type_id" options="{'no_quick_create':True,'no_create_edit':True}"/>
                             <field name="ctc"/>
                             <field name="no_of_opening"/>
-                            <field name="soft_skills_ids" widget="many2many_tags" options="{'no_quick_create':True,'no_create_edit':True}"/>
+                            <field name="soft_skills_ids" widget="many2many_tags" options="{'no_quick_create':True,'no_create_edit':True, 'color_field': 'color'}"/>
                         </group>
                     </group>
                     <br/>
@@ -66,7 +67,7 @@
                                 <field name="company_address"/>
                                 <field name="website"/>
                                 <field name="education_required"/>
-                                <field name="job_applicant_ids" widget="many2many_tags" options="{'no_quick_create':True,'no_create_edit':True}"/>
+                                <field name="job_applicant_ids" widget="many2many_tags" options="{'no_quick_create':True,'no_create_edit':True}" />
                                 <field name="job_posted_date"/>
                             </group>
                         </page>

@@ -24,7 +24,7 @@
                 <field name="expected_ctc"/>
                 <field name="city"/>
                 <field name="postcode"/>
-                <field name="technical_skills_ids" widget="many2many_tags"/>
+                <field name="technical_skills_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
             </tree>
         </field>
     </record>
@@ -33,19 +33,52 @@
         <field name="name">Job Seekers Form View</field>
         <field name="model">job.seeker</field>
         <field name="arch" type="xml">
-            <form string="Property">
+            <form string="Seeker">
                 <sheet>
+                    <field name="image" widget='image' class="oe_avatar" style="margin-top:20px" options='{"preview_image": "image", "size": [150, 150]}'/>
                     <br/>
                     <label for="name" string="Name"/>
                     <h1>
-                        <field name="name" placeholder="Dhrutik Patel"/>
+                        <field name="name" placeholder="e.g. Dhrutik Patel"/>
                     </h1>
                     <br/>
                     <group>
                         <group>
+                            <field name="technical_skills_ids" widget="many2many_tags" options="{'no_quick_create':True,'no_create_edit':True, 'color_field': 'color'}"/>
                             <field name="current_ctc"/>
+                            <field name="experience"/>
+                            <field name="age"/>
+                        </group>
+                        <group>
+                            <field name="soft_skills_ids" widget="many2many_tags" options="{'no_quick_create':True,'no_create_edit':True, 'color_field': 'color'}"/>
+                            <field name="expected_ctc"/>
+                            <field name="gender"/>
+                            <field name="date_of_birth"/>
                         </group>
                     </group>
+                    <br/>
+                    <notebook>
+                        <!-- Personal Info -->
+                        <page name="personal_info" string="Personal Info">
+                            <br/>
+                            <group>
+                                <field name="last_job_details"/>
+                                <field name="description"/>
+                                <field name="education"/>
+                                <field name="email"/>
+                                <field name="phone_number" widget="phone"/>
+                            </group>
+                        </page>
+                        <!-- Address -->
+                        <page name="address" string="Address">
+                            <br/>
+                            <group>
+                                <field name="city"/>
+                                <field name="country"/>
+                                <field name="postcode"/>
+                            </group>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>

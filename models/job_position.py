@@ -5,6 +5,7 @@ from odoo import models, fields
 class JobPosition(models.Model):
     _name = "job.position"
     _description = "This model contains all information about available jobs."
+    _rec_name = "company_name_id"
 
     company_name_id = fields.Many2one("job.portal.company", string="Company Name", required=True)
     industry_type_id = fields.Many2one("company.industry.type", string="Industry Type", required=True)
@@ -25,4 +26,5 @@ class JobPosition(models.Model):
     company_recruiter_name_id = fields.Many2one("job.portal.users", string="Recruiter Name")
     soft_skills_ids = fields.Many2many("soft.skill.tags", string="Soft Skills")
     technical_skills_ids = fields.Many2many("technical.skill.tags", string="Technical Skills")
+    image = fields.Binary("Image", attachment=True, store=True)
     
