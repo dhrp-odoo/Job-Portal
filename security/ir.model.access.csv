@@ -7,3 +7,5 @@ access_job_portal_employment_type,access_job_portal_employment_type,model_job_em
 access_technical_skill,access_technical_skill,model_technical_skill_tags,base.group_user,1,1,1,1
 access_soft_skill,access_soft_skill,model_soft_skill_tags,base.group_user,1,1,1,1
 access_job_portal_users,access_job_portal_users,model_job_portal_users,base.group_user,1,1,1,1
+access_job_position_offer,access_job_position_offer,model_job_position_offer,base.group_user,1,1,1,1
+access_job_seeker_offer,access_job_seeker_offer,model_job_seeker_offer,base.group_user,1,1,1,1

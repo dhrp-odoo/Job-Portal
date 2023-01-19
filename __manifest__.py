@@ -19,6 +19,8 @@
         'views/job_portal_company_views.xml',
         'views/job_position_views.xml',
         'views/job_seeker_views.xml',
+        'views/job_position_offer_views.xml',
+        'views/job_seeker_offer_views.xml',
         'views/job_portal_menus.xml',
     ],
     'demo': [

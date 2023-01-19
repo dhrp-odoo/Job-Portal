@@ -23,4 +23,5 @@ class JobSeeker(models.Model):
     education = fields.Text(string="Education")
     description = fields.Text(string="Description")
     last_job_details = fields.Text(string="Last Job Detail")
-    image = fields.Binary("Image", attachment=True, store=True)
+    # image = fields.Binary("Image", attachment=True, store=True)
+    offer_ids = fields.One2many('job.seeker.offer', 'job_position_id', string="Offers")

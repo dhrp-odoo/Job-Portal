@@ -42,8 +42,7 @@
                     <notebook>
                         <!-- Personal Info -->
                         <page name="company_info" string="Company's Info">
-                            <br/>
-                            <group>
+                            <group style="margin-top:15px">
                                 <field name="industry_type_id"/>
                                 <field name="founded"/>
                                 <field name="no_of_employees"/>
@@ -53,10 +52,23 @@
                                 <field name="our_offices" widget="many2many_tags"/>
                             </group>
                         </page>
+                        <!-- Openings -->
+                        <page name="opening" string="Openings">
+                            <field name="position_ids" style="margin-top:15px">
+                                <tree>
+                                    <field name="job_position"/>
+                                    <field name="experience_required"/>
+                                    <field name="ctc"/>
+                                    <field name="no_of_opening"/>
+                                    <field name="employment_type_id"/>
+                                    <field name="job_posted_date"/>
+                                    <field name="technical_skills_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                                </tree>
+                            </field>
+                        </page>
                         <!-- Description -->
                         <page name="description" string="Description">
-                            <br/>
-                            <group>
+                            <group style="margin-top:15px">
                                 <field name="description"/>
                             </group>
                         </page>

@@ -12,3 +12,4 @@ class JobPortalUsers(models.Model):
     email_address = fields.Char(string="Email")
     language = fields.Many2one("res.lang", string="Language")
     image = fields.Binary("Image", attachment=True, store=True)
+    application_ids = fields.One2many("job.position.offer", "name")

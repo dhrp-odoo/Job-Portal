@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!--** List view **-->
+    <record id="job_seeker_offer_tree_view" model="ir.ui.view">
+        <field name="name">Job Seeker Offers List View</field>
+        <field name="model">job.seeker.offer</field>
+        <field name="arch" type="xml">
+            <tree string="List View" decoration-success = "status == 'accepted'" decoration-danger = "status == 'refused'">
+                <field name="company_name_id"/>
+                <field name="job_position"/>
+                <field name="ctc_offer"/>
+                <field name="industry_type_id"/>
+                <field name="employment_type_id"/>
+                <field name="offer_date"/>
+                <field name="status"/>
+                <button name="action_accept_btn" string="   " type="object" icon="fa-check" attrs="{'invisible': ['|', ('status','=', 'accepted'), ('status', '=', 'refused')]}"/>
+                <button name="action_refuse_btn" string="   " type="object" icon="fa-times" attrs="{'invisible': ['|', ('status','=', 'accepted'), ('status', '=', 'refused')]}"/>
+            </tree>
+        </field>
+    </record>
+    <!--** Form view **-->
+    <record id="job_seeker_offer_model_form_view" model="ir.ui.view">
+        <field name="name">Job Seeker Offers Form View</field>
+        <field name="model">job.seeker.offer</field>
+        <field name="arch" type="xml">
+            <form string="Job Seeker Form View">
+                <sheet>
+                    <group>
+                        <field name="company_name_id"/>
+                        <field name="job_position"/>
+                        <field name="ctc_offer"/>
+                        <field name="industry_type_id"/>
+                        <field name="employment_type_id"/>
+                        <field name="offer_date"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

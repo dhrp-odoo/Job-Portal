@@ -35,7 +35,7 @@
         <field name="arch" type="xml">
             <form string="Seeker">
                 <sheet>
-                    <field name="image" widget='image' class="oe_avatar" style="margin-top:20px" options='{"preview_image": "image", "size": [150, 150]}'/>
+                    <!-- <field name="image" widget='image' class="oe_avatar" options='{"preview_image": "image", "size": [150, 150]}'/> -->
                     <br/>
                     <label for="name" string="Name"/>
                     <h1>
@@ -60,8 +60,7 @@
                     <notebook>
                         <!-- Personal Info -->
                         <page name="personal_info" string="Personal Info">
-                            <br/>
-                            <group>
+                            <group style="margin-top:15px">
                                 <field name="last_job_details"/>
                                 <field name="description"/>
                                 <field name="education"/>
@@ -69,10 +68,13 @@
                                 <field name="phone_number" widget="phone"/>
                             </group>
                         </page>
+                        <!-- Offers -->
+                        <page name="offer" string="Offers">
+                            <field name="offer_ids" style="margin-top:15px"/>
+                        </page>
                         <!-- Address -->
                         <page name="address" string="Address">
-                            <br/>
-                            <group>
+                            <group style="margin-top:15px">
                                 <field name="city"/>
                                 <field name="country"/>
                                 <field name="postcode"/>

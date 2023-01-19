@@ -16,6 +16,7 @@ class JobPortalCompany(models.Model):
     company_founders = fields.Many2many("job.portal.users", string="Founders")
     our_offices = fields.Many2many("res.country", string="Our Offices")
     image = fields.Binary("Image", attachment=True, store=True)
+    position_ids = fields.One2many("job.position", "company_name_id")
     
     # Company's all openings //TODO
     # List of all applicants

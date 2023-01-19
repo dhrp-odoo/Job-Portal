@@ -40,13 +40,26 @@
                     <notebook>
                         <!-- User's Info -->
                         <page name="user_info" string="User's Info">
-                            <br/>
-                            <group>
+                            <group style="margin-top:15px">
                                 <field name="age"/>
                                 <field name="phone_number" widget="phone"/>
                                 <field name="email_address"/>
                                 <field name="language"/>
                             </group>
+                        </page>
+                        <!-- Applications -->
+                        <page name="application" string="Applications">
+                            <field name="application_ids">
+                                <tree decoration-success = "status == 'accepted'" decoration-info = "status == 'on_process'" decoration-danger = "status == 'refused'">
+                                    <field name="name"/>
+                                    <field name="job_position_id"/>
+                                    <field name="expected_ctc"/>
+                                    <field name="experience"/>
+                                    <field name="date_applied"/>
+                                    <field name="technical_skills_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                                    <field name="status"/>
+                                </tree>
+                            </field>
                         </page>
                     </notebook>
                 </sheet>

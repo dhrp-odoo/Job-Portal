@@ -14,7 +14,6 @@ class JobPosition(models.Model):
     job_position = fields.Char(string="Job Position", required=True)
     no_of_opening = fields.Integer(string="Openings")
     job_posted_date = fields.Date(string="Job Posted", default=lambda self: fields.Date.today(), copy=False)
-    job_applicant_ids = fields.Many2many("job.portal.users", string="Job Applicants")
     job_description = fields.Text(string="Job Description")
     job_benefit = fields.Text(string="Job Benefits")
     employment_type_id = fields.Many2one("job.employment.type", string="Employment Type", required=True)
@@ -27,4 +26,6 @@ class JobPosition(models.Model):
     soft_skills_ids = fields.Many2many("soft.skill.tags", string="Soft Skills")
     technical_skills_ids = fields.Many2many("technical.skill.tags", string="Technical Skills")
     image = fields.Binary("Image", attachment=True, store=True)
+    offer_ids = fields.One2many('job.position.offer', 'job_position_id', string="Offers")  
+    state = fields.Selection(string="State", readonly=True, required=True, copy=False, selection=[('new', 'New'), ('on_process', 'On Process'), ('selected', 'Selected'), ('cancelled', 'Cancelled')], default="new")
     

@@ -34,6 +34,9 @@
         <field name="model">job.position</field>
         <field name="arch" type="xml">
             <form string="Position">
+                <header>
+                    <field name="state" widget="statusbar" options="{'clickable': False}" />
+                </header>
                 <sheet>
                     <field name="image" widget='image' class="oe_avatar" style="margin-top:20px" options='{"preview_image": "image", "size": [150, 150]}'/>
                     <br/>
@@ -60,21 +63,22 @@
                     <notebook>
                         <!-- Company's Info -->
                         <page name="company_info" string="Company's Info">
-                            <br/>
-                            <group>
+                            <group style="margin-top:15px">
                                 <field name="job_description"/>
                                 <field name="job_benefit"/>
                                 <field name="company_address"/>
                                 <field name="website"/>
                                 <field name="education_required"/>
-                                <field name="job_applicant_ids" widget="many2many_tags" options="{'no_quick_create':True,'no_create_edit':True}" />
                                 <field name="job_posted_date"/>
                             </group>
                         </page>
+                        <!-- Applicants -->
+                        <page name="applicant" string="Applicants">
+                            <field name="offer_ids" style="margin-top:15px"/>
+                        </page>
                         <!-- Recruiter's Info -->
                         <page name="recruiter_info" string="Recruiter's Info">
-                            <br/>
-                            <group>
+                            <group style="margin-top:15px">
                                 <field name="company_recruiter_name_id"/>
                                 <field name="company_email"/>
                                 <field name="company_contact_no" widget="phone"/>
