@@ -85,4 +85,24 @@
             </form>
         </field>
     </record>
+    <!--** Search view **-->
+    <record id="job_portal_model_search" model="ir.ui.view">
+        <field name="name">Job Portal Search</field>
+        <field name="model">job.position</field>
+        <field name="arch" type="xml">
+            <search string="Job Portal Search">
+                <field name="company_name_id"/>
+                <field name="industry_type_id"/>
+                <field name="ctc" filter_domain="[('ctc', '>=', self)]"/>
+                <field name="experience_required"/>
+                <field name="job_position"/>
+                <field name="no_of_opening" filter_domain="[('no_of_opening', '>=', self)]"/>
+                <field name="employment_type_id"/>
+                <field name="technical_skills_ids" filter_domain="[('technical_skills_ids', '=ilike', self)]"/>
+                <separator/>
+                <filter string="Industry Type" name="industry_type_id" context="{'group_by': 'industry_type_id'}"/>
+                <filter string="Employment Type" name="employment_type_id" context="{'group_by': 'employment_type_id'}"/>
+            </search>
+        </field>
+    </record>
 </odoo>

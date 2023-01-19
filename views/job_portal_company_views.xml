@@ -32,7 +32,7 @@
         <field name="arch" type="xml">
             <form string="Company">
                 <sheet>
-                    <field name="image" widget='image' class="oe_avatar" options='{"preview_image": "image", "size": [200, 200]}'/>
+                    <field name="image" widget='image' class="oe_avatar" options='{"preview_image": "image", "size": [175, 175]}'/>
                     <br/>
                     <label for="name" string="Name"/>
                     <h1>
@@ -63,6 +63,20 @@
                     </notebook>
                 </sheet>
             </form>
+        </field>
+    </record>
+    <!--** Search view **-->
+    <record id="job_portal_company_model_search" model="ir.ui.view">
+        <field name="name">Job Portal Company Search</field>
+        <field name="model">job.portal.company</field>
+        <field name="arch" type="xml">
+            <search string="Job Company Search">
+                <field name="name"/>
+                <separator/>
+                <field name="no_of_employees" filter_domain="[('no_of_employees', '>=', self)]"/>
+                <separator/>
+                <filter string="Industry Type" name="industry_type_id" context="{'group_by': 'industry_type_id'}"/>
+            </search>
         </field>
     </record>
 </odoo>

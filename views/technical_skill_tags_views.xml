@@ -38,4 +38,14 @@
             </form>
         </field>
     </record>
+    <!--** Search view **-->
+    <record id="technical_skills_model_search" model="ir.ui.view">
+        <field name="name">Technical Skill Search</field>
+        <field name="model">technical.skill.tags</field>
+        <field name="arch" type="xml">
+            <search string="Technical Skill Search">
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
 </odoo>

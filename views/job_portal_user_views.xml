@@ -30,7 +30,7 @@
         <field name="arch" type="xml">
             <form string="Users">
                 <sheet>
-                    <field name="image" widget='image' class="oe_avatar" style="margin-top:20px" options='{"preview_image": "image", "size": [150, 150]}'/>
+                    <field name="image" widget='image' class="oe_avatar" options='{"preview_image": "image", "size": [150, 150]}'/>
                     <br/>
                     <label for="name" string="Name"/>
                     <h1>
@@ -51,6 +51,19 @@
                     </notebook>
                 </sheet>
             </form>
+        </field>
+    </record>
+    <!--** Search view **-->
+    <record id="job_portal_user_model_search" model="ir.ui.view">
+        <field name="name">Job Portal User Search</field>
+        <field name="model">job.portal.users</field>
+        <field name="arch" type="xml">
+            <search string="Job Users Search">
+                <field name="name"/>
+                <separator/>
+                <field name="age" filter_domain="[('age', '>=', self)]"/>
+                <field name="language"/>
+            </search>
         </field>
     </record>
 </odoo>

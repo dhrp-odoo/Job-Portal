@@ -38,4 +38,14 @@
             </form>
         </field>
     </record>
+    <!--** Search view **-->
+    <record id="job_portal_employment_search" model="ir.ui.view">
+        <field name="name">Job Portal Employment Search</field>
+        <field name="model">job.employment.type</field>
+        <field name="arch" type="xml">
+            <search string="Employment Type Search">
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
 </odoo>
