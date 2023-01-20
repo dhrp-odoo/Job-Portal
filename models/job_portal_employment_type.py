@@ -7,5 +7,6 @@ class EmploymentType(models.Model):
     _description = "This model contains information about job employment type"
     
     name = fields.Char(string="Name", required=True)
+    position_ids = fields.One2many('job.position', 'employment_type_id')
     
     _sql_constraints = [('employment_type_unique', 'UNIQUE (name)', 'A employment type with the same name already exists.')]

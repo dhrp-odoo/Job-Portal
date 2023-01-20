@@ -8,5 +8,6 @@ class TechnicalSkillTags(models.Model):
     
     name = fields.Char(string="Name", required=True)
     color = fields.Integer(string="Color Index")
+    position_ids = fields.One2many('job.position', 'technical_skills_ids')
     
     _sql_constraints = [('technical_language_unique', 'UNIQUE (name)', 'A language with the same name already exists.')]

@@ -8,5 +8,6 @@ class SoftSkillTags(models.Model):
     
     name = fields.Char(string="Name", required=True)
     color = fields.Integer(string="Color Index")
+    position_ids = fields.One2many('job.position', 'soft_skills_ids')
     
     _sql_constraints = [('soft_skill_unique', 'UNIQUE (name)', 'A soft skill with the same name already exists.')]

@@ -34,6 +34,24 @@
                         <field name="name" placeholder="e.g. Internship"/>
                     </h1>
                     <br/>
+                    <notebook>
+                        <page name="job_position" string="Job Position">
+                            <form>
+                                <field name="position_ids" readonly="1">
+                                    <tree>
+                                        <field name="company_name_id"/>
+                                        <field name="industry_type_id"/>
+                                        <field name="ctc"/>
+                                        <field name="experience_required"/>
+                                        <field name="job_position"/>
+                                        <field name="no_of_opening"/>
+                                        <field name="employment_type_id"/>
+                                        <field name="technical_skills_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                                    </tree>
+                                </field>
+                            </form>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
