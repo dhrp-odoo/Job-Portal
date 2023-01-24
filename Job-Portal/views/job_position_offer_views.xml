@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <tree string="List View" decoration-success = "status == 'accepted'" decoration-info = "status == 'on_process'" decoration-danger = "status == 'refused'">
                 <field name="name"/>
-                <field name="job_position_id"/>
+                <!-- <field name="job_position_id"/> -->
                 <field name="expected_ctc"/>
                 <field name="experience"/>
                 <field name="date_applied"/>
@@ -28,7 +28,7 @@
                 <sheet>
                     <group>
                         <field name="name"/>
-                        <field name="job_position_id"/>
+                        <!-- <field name="job_position_id"/> -->
                         <field name="expected_ctc"/>
                         <field name="experience"/>
                         <field name="date_applied"/>
