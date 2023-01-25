@@ -14,6 +14,7 @@
                 <field name="offer_date"/>
                 <field name="status"/>
                 <button name="action_accept_btn" string="   " type="object" icon="fa-check" attrs="{'invisible': ['|', ('status','=', 'accepted'), ('status', '=', 'refused')]}"/>
+                <button name="action_onprocess_btn" string="   " type="object" icon="fa-spinner" attrs="{'invisible': ['|', ('status','=', 'accepted'), ('status', '=', 'refused')]}"/>
                 <button name="action_refuse_btn" string="   " type="object" icon="fa-times" attrs="{'invisible': ['|', ('status','=', 'accepted'), ('status', '=', 'refused')]}"/>
             </tree>
         </field>

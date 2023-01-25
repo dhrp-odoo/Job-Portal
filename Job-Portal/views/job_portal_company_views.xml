@@ -54,7 +54,7 @@
                         </page>
                         <!-- Openings -->
                         <page name="opening" string="Openings">
-                            <field name="position_ids" style="margin-top:15px">
+                            <field name="position_ids" style="margin-top:15px" readonly="1">
                                 <tree>
                                     <field name="job_position"/>
                                     <field name="experience_required"/>

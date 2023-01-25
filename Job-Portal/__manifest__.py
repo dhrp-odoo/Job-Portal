@@ -8,7 +8,7 @@
     'author': 'Dhrutik Patel (dhrp)',
     'website': 'https://www.odoo.com/',
     'summary': 'Job Portal : Create A Better Future For Yourself',
-    'depends': [],
+    'depends': ['mail'],
     'data': [
         'security/ir.model.access.csv',
         'views/job_portal_user_views.xml',

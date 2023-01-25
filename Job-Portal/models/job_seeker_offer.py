@@ -14,7 +14,7 @@ class JobSeekerOffer(models.Model):
     industry_type_id = fields.Many2one("company.industry.type", string="Industry Type", required=True)
     employment_type_id = fields.Many2one("job.employment.type", string="Employment Type", required=True)
     offer_date = fields.Date(string="Offer Date", default=lambda self: fields.Date.today(), readonly=True)
-    status = fields.Selection(string="Status", selection=[('accepted','Accepted'), ('refused','Refused')], copy=False, readonly=True)
+    status = fields.Selection(string="Status", selection=[('accepted','Accepted'), ('on_process', 'On Process'), ('refused','Refused')], copy=False, readonly=True)
     
     # Extended functionality of create function
     @api.model
@@ -30,7 +30,11 @@ class JobSeekerOffer(models.Model):
         
         if company_name.name in offer_list:
             raise UserError("You have already offered to this User, you cannot offer again!!!")
-        
+
+        for record in self:
+            if 'on_process' in offer_list:
+                record.job_position_id.state = 'on_process'
+                
         return super().create(value)
     
      # Functions
@@ -45,6 +49,13 @@ class JobSeekerOffer(models.Model):
         
         for record in self:
             record.status = 'accepted'
+            record.job_position_id.state = "accepted"
+        return True
+
+    def action_onprocess_btn(self):
+        for record in self:
+            record.status = 'on_process'
+            record.job_position_id.state = "on_process"
         return True
 
     def action_refuse_btn(self):

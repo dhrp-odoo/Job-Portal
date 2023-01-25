@@ -3,12 +3,49 @@
     <record id="job_portal_model_action" model="ir.actions.act_window">
         <field name="name">Job Positions</field>
         <field name="res_model">job.position</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">kanban,tree,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">No jobs found, Please add job over here</p>
             <p>Use the top left
                 <strong>CREATE</strong> button to add new job!!!
             </p>
+        </field>
+    </record>
+    <!--** Kanban view **-->
+    <record id="job_portal_kanban_view" model="ir.ui.view">
+        <field name="name">Job Positions Kanban View</field>
+        <field name="model">job.position</field>
+        <field name="arch" type="xml">
+            <!-- +++++++++++++++++++++++ -->
+            <kanban default_group_by="industry_type_id" records_draggable="0">
+                <field name="state"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <h3>
+                                <field name="company_name_id" />
+                            </h3>
+                            <div style="margin-top: 10px;">
+							    Job Position:
+                                <field name="job_position" />
+                            </div>
+                            <div style="margin-top: 10px;">
+								Openings:
+                                <field name="no_of_opening" />
+                            </div>
+                            <div style="margin-top: 10px;">
+							    CTC:
+                                <field name="ctc" />
+                                LPA
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <field name="technical_skills_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+            <!-- +++++++++++++++++++++++ -->
         </field>
     </record>
     <!--** List view **-->
@@ -74,7 +111,7 @@
                         </page>
                         <!-- Applicants -->
                         <page name="applicant" string="Applicants">
-                            <field name="offer_ids" style="margin-top:15px"/>
+                            <field name="offer_ids" style="margin-top:15px" attrs="{'readonly': [('state', '=', 'recruitment_accomplished')]}"/>
                         </page>
                         <!-- Recruiter's Info -->
                         <page name="recruiter_info" string="Recruiter's Info">
@@ -86,6 +123,11 @@
                         </page>
                     </notebook>
                 </sheet>
+                <!-- <div class="oe_chatter">
+                    <field name="message_follower_ids" />
+                    <field name="message_ids" />
+                    <field name="activity_ids" />
+                </div> -->
             </form>
         </field>
     </record>

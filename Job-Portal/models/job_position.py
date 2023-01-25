@@ -4,6 +4,7 @@ from odoo import models, fields
 
 class JobPosition(models.Model):
     _name = "job.position"
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "This model contains all information about available jobs."
     _rec_name = "company_name_id"
 
@@ -26,6 +27,6 @@ class JobPosition(models.Model):
     soft_skills_ids = fields.Many2many("soft.skill.tags", string="Soft Skills")
     technical_skills_ids = fields.Many2many("technical.skill.tags", string="Technical Skills")
     image = fields.Binary("Image", attachment=True, store=True)
-    offer_ids = fields.One2many('job.position.offer', 'job_position_id', string="Offers")  
-    state = fields.Selection(string="State", readonly=True, required=True, copy=False, selection=[('new', 'New'), ('on_process', 'On Process'), ('selected', 'Selected'), ('cancelled', 'Cancelled')], default="new")
+    offer_ids = fields.One2many('job.position.offer', 'job_position_id', string="Offers", tracking=True)  
+    state = fields.Selection(string="State", readonly=True, required=True, copy=False, selection=[('new', 'New'), ('on_process', 'On Process'), ('recruitment_accomplished', 'Recruitment Accomplished')], default="new", tracking=True)
     

@@ -3,12 +3,47 @@
     <record id="job_seeker_model_action" model="ir.actions.act_window">
         <field name="name">Job Seekers</field>
         <field name="res_model">job.seeker</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">kanban,tree,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">No job seekers found.</p>
             <p>Use the top left
                 <strong>CREATE</strong> button to add new job seeker!!!
             </p>
+        </field>
+    </record>
+    <!--** Kanban view **-->
+    <record id="job_seeker_kanban_view" model="ir.ui.view">
+        <field name="name">Job Seeker Kanban View</field>
+        <field name="model">job.seeker</field>
+        <field name="arch" type="xml">
+            <!-- +++++++++++++++++++++++ -->
+            <kanban records_draggable="0">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <h3>
+                                <field name="name" />
+                            </h3>
+                            <div style="margin-top: 10px;">
+							    Current CTC:
+                                <field name="current_ctc" /> LPA
+                            </div>
+                            <div style="margin-top: 10px;">
+								Expected CTC:
+                                <field name="expected_ctc" /> LPA
+                            </div>
+                            <div style="margin-top: 10px;">
+							    Experience:
+                                <field name="experience" />
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <field name="technical_skills_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+            <!-- +++++++++++++++++++++++ -->
         </field>
     </record>
     <!--** List view **-->
@@ -34,8 +69,11 @@
         <field name="model">job.seeker</field>
         <field name="arch" type="xml">
             <form string="Seeker">
+                <header>
+                    <field name="state" widget="statusbar" options="{'clickable': False}"/>
+                </header>
                 <sheet>
-                    <!-- <field name="image" widget='image' class="oe_avatar" options='{"preview_image": "image", "size": [150, 150]}'/> -->
+                    <!-- <field name="user_image" widget='image' class="oe_avatar" style="margin-top:20px" options='{"preview_image": "user_image", "size": [150, 150]}'/> -->
                     <br/>
                     <label for="name" string="Name"/>
                     <h1>
@@ -70,7 +108,7 @@
                         </page>
                         <!-- Offers -->
                         <page name="offer" string="Offers">
-                            <field name="offer_ids" style="margin-top:15px"/>
+                            <field name="offer_ids" style="margin-top:15px" attrs="{'readonly': [('state', '=', 'accepted')]}"/>
                         </page>
                         <!-- Address -->
                         <page name="address" string="Address">

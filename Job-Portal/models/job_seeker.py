@@ -23,5 +23,6 @@ class JobSeeker(models.Model):
     education = fields.Text(string="Education")
     description = fields.Text(string="Description")
     last_job_details = fields.Text(string="Last Job Detail")
-    # image = fields.Binary("Image", attachment=True, store=True)
+    # user_image = fields.Binary("User Image", attachment=True, store=True)
     offer_ids = fields.One2many('job.seeker.offer', 'job_position_id', string="Offers")
+    state = fields.Selection(string="State", readonly=True, required=True, copy=False, selection=[('new', 'New'), ('on_process', 'On Process'), ('accepted', 'Accepted')], default="new")

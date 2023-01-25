@@ -49,7 +49,7 @@
                         </page>
                         <!-- Applications -->
                         <page name="application" string="Applications">
-                            <field name="application_ids">
+                            <field name="application_ids" readonly="1">
                                 <tree decoration-success = "status == 'accepted'" decoration-info = "status == 'on_process'" decoration-danger = "status == 'refused'">
                                     <field name="name"/>
                                     <field name="job_position_id"/>
