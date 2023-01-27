@@ -34,7 +34,7 @@
                             </div>
                             <div style="margin-top: 10px;">
 							    Experience:
-                                <field name="experience" />
+                                <field name="experience" /> Years
                             </div>
                             <div style="margin-top: 10px;">
                                 <field name="technical_skills_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>

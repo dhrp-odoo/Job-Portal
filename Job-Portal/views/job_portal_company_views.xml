@@ -3,12 +3,39 @@
     <record id="job_portal_company_model_action" model="ir.actions.act_window">
         <field name="name">Companies</field>
         <field name="res_model">job.portal.company</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">kanban,tree,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">No companies found.</p>
             <p>Use the top left
                 <strong>CREATE</strong> button to add new company here!!!
             </p>
+        </field>
+    </record>
+    <!--** Kanban view **-->
+    <record id="job_portal_company_model_kanban_view" model="ir.ui.view">
+        <field name="name">Companies Kanban View</field>
+        <field name="model">job.portal.company</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="industry_type_id" records_draggable="0">
+                <field name="industry_type_id"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click" style="margin-top: 10px;">
+                            <h3 style="font-size: 18.5px; font-weight: 500;">
+                                <field name="name" />
+                            </h3>
+                            <div style="margin-top: 10px;">
+								Number of Employees	:
+                                <field name="no_of_employees" />
+                            </div>
+                            <div style="margin-top: 10px;">
+								Headquarter :
+                                <field name="headquarter" />
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
         </field>
     </record>
     <!--** List view **-->
