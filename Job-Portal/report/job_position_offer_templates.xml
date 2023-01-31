@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_job_position_offers">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="c">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div>
+                            <span t-field="c.company_name_id" style="font-size: 50px; font-weight: 600; padding: 10px"></span>
+                        </div>
+                        <div style="font-size: 20px; font-weight: 500; padding: 10px">
+                                Job Position :
+                            <span t-field="c.job_position"></span>
+                        </div>
+                        <div style="font-size: 20px; font-weight: 500; padding: 10px">
+                                CTC Offers :
+                            <span t-field="c.ctc"></span> LPA
+                        </div>
+                        <div style="font-size: 20px; font-weight: 500; padding: 10px">
+                                No of Openings :
+                            <span t-field="c.no_of_opening"></span>
+                        </div>
+                        <div style="font-size: 20px; font-weight: 500; padding: 10px">
+                                Employment Type :
+                            <span t-field="c.employment_type_id"></span>
+                        </div>
+                        <!-- APPLICANTS  -->
+                        <div style="font-size: 30px; font-weight: 600; margin-top: 20px; text-align: center;">
+                                Applicants
+                        </div>
+                        <t t-set="offers" t-value="c.mapped('offer_ids')"/>
+                        <div class="table-condition">
+                            <t t-if="len(offers)">
+                                <!-- TABLE -->
+                                <table class="table" style="margin-top: 10px; border: 1px solid black; border-collapse: collapse; font-size: 20px; font-weight: 500;">
+                                    <thead>
+                                        <tr>
+                                            <th>Applicant Name</th>
+                                            <th>Expected CTC (LPA)</th>
+                                            <th>Experience (years)</th>
+                                            <th>Application Date</th>
+                                            <th>Technical Skills</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr t-foreach="offers" t-as="offer">
+                                            <td>
+                                                <span t-field="offer.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="offer.expected_ctc"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="offer.experience"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="offer.date_applied"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="offer.technical_skills_ids"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="offer.status"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </t>
+                            <t t-else="">
+                                <h1 style="text-align: center; margin-top: 20px;">There are no Applicants on this Job Position.</h1>
+                            </t>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

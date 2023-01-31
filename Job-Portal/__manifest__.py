@@ -10,6 +10,7 @@
     'summary': 'Job Portal : Create A Better Future For Yourself',
     'depends': ['mail'],
     'data': [
+        'security/security.xml',
         'security/ir.model.access.csv',
         'views/job_portal_user_views.xml',
         'views/technical_skill_tags_views.xml',
@@ -22,6 +23,9 @@
         'views/job_position_offer_views.xml',
         'views/job_seeker_offer_views.xml',
         'views/job_portal_menus.xml',
+        'report/job_position_offer_templates.xml',
+        'report/job_seeker_offer_templates.xml',
+        'report/job_portal_reports.xml'
     ],
     'demo': [
         'demo/job_portal_industry_type_demo.xml',
@@ -33,6 +37,7 @@
         'demo/job_seeker_demo.xml',
         'demo/job_position_demo.xml'
     ],
+    'category': 'Job Portal',
     'installable': True,
     'application': True,
     'license': 'LGPL-3',

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_job_seeker_offers">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="s">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div>
+                            <span t-field="s.name" style="font-size: 50px; font-weight: 600; padding: 10px"></span>
+                        </div>
+                        <div style="font-size: 20px; font-weight: 500; padding: 10px">
+                                Current CTC :
+                            <span t-field="s.current_ctc"></span> LPA
+                        </div>
+                        <div style="font-size: 20px; font-weight: 500; padding: 10px">
+                                Technical Skills :
+                            <span t-field="s.technical_skills_ids"></span>
+                        </div>
+                        <div style="font-size: 20px; font-weight: 500; padding: 10px">
+                                Experience :
+                            <span t-field="s.experience"></span>
+                        </div>
+                        <!-- APPLICANTS  -->
+                        <div style="font-size: 30px; font-weight: 600; margin-top: 20px; text-align: center;">
+                                Offers
+                        </div>
+                        <t t-set="offers" t-value="s.mapped('offer_ids')"/>
+                        <div class="table-condition">
+                            <t t-if="len(offers)">
+                                <!-- TABLE -->
+                                <table class="table" style="margin-top: 10px; border: 1px solid black; border-collapse: collapse; font-size: 20px; font-weight: 500;">
+                                    <thead>
+                                        <tr>
+                                            <th>Company Name</th>
+                                            <th>Job Position</th>
+                                            <th>CTC Offers</th>
+                                            <th>Industry Type</th>
+                                            <th>Offer Date</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr t-foreach="offers" t-as="offer">
+                                            <td>
+                                                <span t-field="offer.company_name_id"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="offer.job_position"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="offer.ctc_offer"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="offer.industry_type_id"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="offer.offer_date"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="offer.status"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </t>
+                            <t t-else="">
+                                <h1 style="text-align: center; margin-top: 20px;">There are no Applicants on this Job Position.</h1>
+                            </t>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

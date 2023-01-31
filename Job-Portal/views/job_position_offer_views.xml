@@ -13,9 +13,9 @@
                 <field name="date_applied"/>
                 <field name="technical_skills_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
                 <field name="status"/>
-                <button name="action_accept_btn" string="   " type="object" icon="fa-check" attrs="{'invisible': ['|', ('status','=', 'accepted'), ('status', '=', 'refused')]}"/>
-                <button name="action_onprocess_btn" string="   " type="object" icon="fa-spinner" attrs="{'invisible': ['|', ('status','=', 'accepted'), ('status', '=', 'refused')]}"/>
-                <button name="action_refuse_btn" string="   " type="object" icon="fa-times" attrs="{'invisible': ['|', ('status','=', 'accepted'), ('status', '=', 'refused')]}"/>
+                <button name="action_accept_btn" string="   " type="object" icon="fa-check" attrs="{'invisible': ['|', ('status','=', 'accepted'), ('status', '=', 'refused')]}" groups="Job-Portal.job_portal_group_manager"/>
+                <button name="action_onprocess_btn" string="   " type="object" icon="fa-spinner" attrs="{'invisible': ['|', ('status','=', 'accepted'), ('status', '=', 'refused')]}" groups="Job-Portal.job_portal_group_manager"/>
+                <button name="action_refuse_btn" string="   " type="object" icon="fa-times" attrs="{'invisible': ['|', ('status','=', 'accepted'), ('status', '=', 'refused')]}" groups="Job-Portal.job_portal_group_manager"/>
             </tree>
         </field>
     </record>

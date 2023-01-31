@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- Job Position Offer Report -->
+    <record id="job_position_offer_report" model="ir.actions.report">
+        <field name="name">Job Position Offers Report</field>
+        <field name="model">job.position</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">Job-Portal.report_job_position_offers</field>
+        <field name="report_file">real_estate.report_job_position_offers</field>
+        <field name="binding_model_id" ref="model_job_position"/>
+        <field name="binding_type">report</field>
+    </record>
+    <!-- Job Seeker Offer Report -->
+    <record id="job_seeker_offer_report" model="ir.actions.report">
+        <field name="name">Job Seeker Offers Report</field>
+        <field name="model">job.seeker</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">Job-Portal.report_job_seeker_offers</field>
+        <field name="report_file">real_estate.report_job_seeker_offers</field>
+        <field name="binding_model_id" ref="model_job_seeker"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>
